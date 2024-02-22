@@ -1,0 +1,72 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .nav-item {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0;
+}
+
+nav .nav-item.wait {
+  opacity: var(--opacity-2lvl) !important;
+}
+
+nav .nav-item::before {
+  content: ' ';
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  right: -8px;
+  left: -8px;
+  border: 1px solid var(--color-text-primary);
+  border-radius: 30px;
+  opacity: 0;
+}
+
+@media (hover: hover) {
+  nav .nav-item:hover {
+    opacity: var(--opacity-1lvl);
+  }
+
+  nav .nav-item:hover::before {
+    opacity: 1;
+  }
+}
+
+.hourly {
+  animation-name: slideNav;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: var(--anim-duration);
+  animation-timing-function: var(--anim-easing);
+  animation-delay: 1.2s;
+}
+
+.rates {
+  animation-name: slideNav;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: var(--anim-duration);
+  animation-timing-function: var(--anim-easing);
+  animation-delay: 1s;
+}
+
+/* animation */
+
+@keyframes slideNav {
+  from { opacity: 0; transform: translateY(-200%); }
+  to { opacity: 1; transform:translateY(0); }
+}
+
+@media (max-width: 420px) {
+  nav .nav-item {
+    opacity: var(--opacity-1lvl) !important;
+  }
+
+  nav .nav-item.active {
+    opacity: 1 !important;
+  }
+}

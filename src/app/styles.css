@@ -1,0 +1,35 @@
+:root {
+  background-color: black;
+  
+  --font-h1: 9vw;
+  --font-h2: 28px;
+  --font-main: 14px;
+  --font-small: 12px;
+
+  --padding: 38px;
+
+  --color-background: black;
+  --color-text-primary: white;
+  --color-text-secondary: #666666;
+
+  --opacity-text: 0.6;
+  --opacity-1lvl: 0.5;
+  --opacity-2lvl: 0.25;
+
+  --anim-easing: ease-out;
+  --anim-duration-fast: 0.6s;
+  --anim-duration: 1.4s;
+  --anim-duration-slow: 2.4s;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --font-h1: 110px;
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --padding: 20px;
+  }
+}

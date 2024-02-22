@@ -1,0 +1,43 @@
+.input-wrapper {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.input-wrapper input {
+  width: auto;
+  background-color: var(--color-background);
+  border-radius: 4px;
+  border: none;
+  color: var(--color-text-primary);
+  padding: 0 4px;
+  text-align: center;
+  font-size: var(--font-main);
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: var(--color-text-primary);
+  letter-spacing: 1;
+}
+
+.input-wrapper input:focus {
+  border: none;
+  outline: none;
+}
+
+.cities {
+  min-width: 290px;
+  border: 1px solid var(--color-text-secondary);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+}
+
+.cities li {
+  margin-bottom: 4px;
+  color: var(--color-text-secondary);
+}
+
+.cities li:hover {
+  color: var(--color-text-primary);
+}

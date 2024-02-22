@@ -1,0 +1,84 @@
+.popup {
+  border: 1px solid var(--color-text-secondary);
+  background-color: var(--color-background);
+  text-align: left;
+  padding: 24px;
+  z-index: 10;
+  transform-origin: top left;
+  animation-name: popup-open, popup-show;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: var(--anim-duration-fast);
+  animation-timing-function: var(--anim-easing);
+}
+
+@keyframes popup-open {
+  0% {transform: scaleY(0); border-radius: 4px;}
+  100% {transform: scaleY(1); border-radius: 14px;}
+}
+
+@keyframes popup-show {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+.popup > * {
+  color: var(--color-background);
+}
+
+.popup.animate-content > * {
+  animation-name: show-text;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: var(--anim-duration-slow);
+  animation-timing-function: var(--anim-easing);
+}
+
+.popup.animate-content .popup-close {
+  animation-name: show-close-icon;
+  animation-duration: var(--anim-duration);
+}
+
+@keyframes show-text {
+  from {color: var(--color-background);}
+  to {color: var(--color-text-primary);}
+}
+
+@keyframes show-close-icon {
+  from {color: var(--color-background); transform: rotate(-90deg);}
+  to {color: var(--color-text-secondary); transform: rotate(0);}
+}
+
+.popup .popup-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+}
+
+.popup .popup-close .popup-close-svg {
+  color: inherit;
+  transition: color 0.4s;
+}
+
+@media (hover: hover) {
+  .popup .popup-close:hover .popup-close-svg {
+    transition: color 0.4s;
+    color: var(--color-text-primary);
+  }
+}
+
+.unload-popup {
+  border-radius: 14px;
+  animation-name: popup-hide;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: .2s;
+  animation-timing-function: var(--anim-easing);
+}
+
+@keyframes popup-hide {
+  0% {opacity: 1}
+  100% {opacity: 0}
+}

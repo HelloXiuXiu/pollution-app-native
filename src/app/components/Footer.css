@@ -1,0 +1,25 @@
+footer {
+  opacity: 0;
+  position: relative;
+  padding: var(--padding);
+  animation-name: slideFooterUp;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: var(--anim-duration);
+  animation-timing-function: var(--anim-easing);
+  animation-delay: 1s;
+}
+
+@keyframes slideFooterUp {
+ from { opacity: 0; transform: translateY(-50%); }
+ to { opacity: 1; transform:translateY(0); }
+}
+
+.location {
+  display: inline;
+}
+
+.location .small {
+  user-select: none;
+  color: var(--color-text-secondary);
+}

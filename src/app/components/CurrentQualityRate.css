@@ -1,0 +1,34 @@
+.current-air-quality {
+  position: absolute;
+  top: var(--padding);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--font-h2);
+  opacity: 0;
+  text-wrap: balance;
+  animation-name: showMain;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: var(--anim-duration);
+  animation-timing-function: var(--anim-easing);
+  animation-delay: var(--anim-duration-slow);
+}
+
+.current-air-quality .small {
+  display: block;
+  margin-top: 12px;
+  font-size: var(--font-main);
+  color: var(--color-text-secondary);
+}
+
+@keyframes showMain {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 420px) {
+  .current-air-quality {
+    top: 84px;
+    width: 80%;
+  }
+}
