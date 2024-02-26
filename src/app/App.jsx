@@ -35,9 +35,9 @@ function App () {
     }
 
     navigator.geolocation.getCurrentPosition(pos => {
-      // getAirData(pos.coords.latitude, pos.coords.longitude)
+      getAirData(pos.coords.latitude, pos.coords.longitude)
     })
-    getAirData(44.85, 20.45)
+    // getAirData(44.85, 20.45)
   }, [])
 
   // get pollution data
