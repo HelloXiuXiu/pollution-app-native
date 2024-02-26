@@ -37,7 +37,7 @@ const Header = memo(function Header ({ index, image }) {
           </p>
           <br /><br />
           <p>Source code: <a href="https://github.com/HelloXiuXiu/pollution-app-native" target="_blank" rel="nooper nofollow">GitHub</a></p>
-          <p>Web version: <a href="https://github.com/HelloXiuXiu/pollution-app" target="_blank" rel="nooper nofollow">GitHub</a></p>
+          <p>Online (web version): <a href="https://air-pollution.xyz" target="_blank" rel="nooper nofollow">air-pollution.xyz</a></p>
           <p className="contribution">contribution</p>
           <h2 className="subheading">data:</h2>
           <p className="contribution-subtext">The data comes from <a href="https://open-meteo.com/" target="_blank" rel="nooper nofollow noreferrer">Open-Meteo</a>&nbsp;
