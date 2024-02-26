@@ -1,5 +1,14 @@
 # Pollution App Native
 <br>
-
-Native version of React application. Built with [Socket Runtime](https://github.com/socketsupply/socket)
+The Application shows the current air quality index along with hourly rates for each pollutant.
 <br>
+Native version of [Pollution App](https://github.com/HelloXiuXiu/pollution-app) (React + Vite web application). Built with [Socket Runtime](https://github.com/socketsupply/socket).
+<br>
+<br>
+Run: 
+<br>
+
+```sh
+npm i
+npm start
+```
