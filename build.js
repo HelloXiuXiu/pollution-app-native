@@ -7,7 +7,7 @@ import fs from 'node:fs/promises' // import fs from 'node:fs'
 
 import esbuild from 'esbuild'
 
-const cp = async (a, b) => fs.cp( //const cp = async (a, b) => fs.promises.cp(
+const cp = async (a, b) => fs.cp(
   path.resolve(a),
   path.join(b, path.basename(a)),
   { recursive: true, force: true }
@@ -28,9 +28,9 @@ async function main () {
     entryPoints: ['src/index.jsx'],
     format: 'esm',
     bundle: true,
-    minify: false, // minify: !!prod, 
-    sourcemap: true, // sourcemap: !prod, 
-    external: ['socket:*', 'node:*'], // external: ['socket:*']
+    minify: false,
+    sourcemap: true,
+    external: ['socket:*', 'node:*'],
     keepNames: true, // - 
     loader: { '.jpg': 'file' } // - 
   }
@@ -46,13 +46,10 @@ async function main () {
   //
   // If the watch command is specified, let esbuild start its server
   //
+
   if (watch) {
     esbuild.serve({ servedir: path.resolve(watch.split('=')[1]) }, params)
   }
-
-  //
-  //
-  //
 
   if (!watch) {
     const opts = {
@@ -65,34 +62,15 @@ async function main () {
     await esbuild.build(opts)
   }
 
-  // if (process.argv.find(s => s.includes('--test'))) {
-  //   await esbuild.build({
-  //     ...params,
-  //     entryPoints: ['test/index.js'],
-  //     outdir: path.join(target, 'test')
-  //   })
-  // }
-
   //
   // Not writing a package json to your project could be a security risk
   //
-  // await fs.promises.writeFile(path.join(target, 'package.json'), '{ "type": "module", "private": true }')
-
   if (!target) {
     console.log('Did not receive the build target path as an argument!')
     process.exit(1)
   }
 
-//   //
-//   // Copy some files into the new project
-//   //
-//   await Promise.all([
-//     cp('src/index.html', target),
-//     cp('src/index.css', target),
-//     cp('src/icon.png', target)
-//   ])
-// }
   await copy(target)
 }
 
-main(process.argv.slice(2)) // main()
+main(process.argv.slice(2))
