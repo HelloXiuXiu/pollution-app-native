@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import './App.css'
 import './styles.css'
 

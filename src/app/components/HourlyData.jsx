@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState, useRef, useLayoutEffect, useCallback, memo } from 'react'
+import React, { useState, useRef, useLayoutEffect, useCallback, memo } from 'react'
 import { useWindowSize } from '../hooks/useWindowSize.js'
 import { useAnimateList } from '../hooks/useAnimateList.js'
 import PopUp from './PopUp.jsx'

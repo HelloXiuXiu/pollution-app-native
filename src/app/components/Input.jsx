@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState, useRef, useEffect, useCallback, memo } from 'react'
+import React, { useState, useRef, useEffect, useCallback, memo } from 'react'
 import './Input.css'
 
 const Input = memo(function Input ({ location, onSetLocation, onGetAirData }) {

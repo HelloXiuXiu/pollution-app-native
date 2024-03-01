@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState, memo } from 'react'
+import React, { useState, memo } from 'react'
 import './Main.css'
 
 import Navigation from './Navigation.jsx'

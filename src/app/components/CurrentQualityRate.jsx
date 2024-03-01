@@ -1,5 +1,4 @@
-import React from 'react'
-import { memo } from 'react'
+import React, { memo } from 'react'
 import './CurrentQualityRate.css'
 
 const CurrentQualityRate = memo(function CurrentQualityRate ({ airQuality }) {

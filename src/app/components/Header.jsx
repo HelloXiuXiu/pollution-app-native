@@ -1,5 +1,4 @@
-import React from 'react'
-import { memo, useState, useRef, useLayoutEffect } from 'react'
+import React, { memo, useState, useRef, useLayoutEffect } from 'react'
 import PopUp from './PopUp.jsx'
 import './Header.css'
 

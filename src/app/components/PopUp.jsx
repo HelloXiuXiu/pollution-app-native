@@ -1,6 +1,5 @@
-import React from 'react'
 import { useAnimateList } from '../hooks/useAnimateList.js'
-import { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './PopUp.css'
 
 export default function PopUp ({ children, wrapperClass, setIsOpen }) {

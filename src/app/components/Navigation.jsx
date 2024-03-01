@@ -1,5 +1,4 @@
-import React from 'react'
-import { memo } from 'react'
+import React, { memo } from 'react'
 import './Navigation.css'
 
 const Navigation = memo(function Navigation ({ isRatesOpen, onSetIsRatesOpen, isHourlyOpen, onSetIsHourlyOpen }) {
