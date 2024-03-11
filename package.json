@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@socketsupply/socket": "^0.5.4",
+    "autoprefixer": "^10.4.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
