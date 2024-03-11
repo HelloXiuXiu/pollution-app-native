@@ -3,7 +3,7 @@
 // When you run 'ssc build', this script (node build.js) will be run
 //
 import path from 'node:path'
-import fs from 'node:fs/promises' // import fs from 'node:fs'
+import fs from 'node:fs/promises'
 
 import esbuild from 'esbuild'
 
@@ -31,8 +31,8 @@ async function main () {
     minify: false,
     sourcemap: true,
     external: ['socket:*', 'node:*'],
-    keepNames: true, // - 
-    loader: { '.jpg': 'file' } // - 
+    keepNames: true,
+    loader: { '.jpg': 'file' }
   }
 
   const watch = process.argv.find(s => s.includes('--watch='))
@@ -46,7 +46,6 @@ async function main () {
   //
   // If the watch command is specified, let esbuild start its server
   //
-
   if (watch) {
     esbuild.serve({ servedir: path.resolve(watch.split('=')[1]) }, params)
   }
