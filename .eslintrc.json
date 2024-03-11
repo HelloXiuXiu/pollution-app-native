@@ -15,5 +15,7 @@
         "react"
     ],
     "rules": {
+        "react/prop-types": "off",
+        "multiline-ternary": "off"
     }
 }
