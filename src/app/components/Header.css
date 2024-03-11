@@ -18,7 +18,6 @@ header {
   animation-fill-mode: forwards;
   animation-duration: var(--anim-duration);
   animation-timing-function: var(--anim-easing);
-  transition: background-image .8s ease-in-out;
   will-change: transform, background-image;
 }
 

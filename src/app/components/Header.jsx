@@ -8,15 +8,17 @@ const Header = memo(function Header ({ index, image }) {
 
   const imageWrapper = useRef(null)
 
+  function updateImage() {
+    setPrevImage(image)
+    imageWrapper.current.style.opacity = '1'
+  }
+
   useLayoutEffect(() => {
     if (!prevImage) setPrevImage(image)
 
     if (image !== prevImage && prevImage) {
       imageWrapper.current.style.opacity = '0'
-      imageWrapper.current.addEventListener('transitionend', () => {
-        setPrevImage(image)
-        imageWrapper.current.style.opacity = '1'
-      })
+      imageWrapper.current.addEventListener('transitionend', updateImage, { once: true })
     }
   }, [image])
 
