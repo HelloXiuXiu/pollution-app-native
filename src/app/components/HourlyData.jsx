@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect, useCallback, memo } from 'react'
+import React, { useState, useRef, useLayoutEffect, memo } from 'react'
 import { useWindowSize } from '../hooks/useWindowSize.js'
 import { useAnimateList } from '../hooks/useAnimateList.js'
 import PopUp from './PopUp.jsx'
@@ -119,7 +119,6 @@ const HourlyList = memo(function HourlyList ({ data, activeObj }) {
 
   const pollutantArrays = {}
   let currentHour = 0
-  let dataArray = []
 
   useAnimateList('.load-hourly')
 

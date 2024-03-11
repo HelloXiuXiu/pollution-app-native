@@ -35,8 +35,8 @@ const Header = memo(function Header ({ index, image }) {
             one of a kind technology for mobile and desktop that runs on any OS (no Electron, React Native or anything else under the hood(!), it’s a pure React app). The runtime also provides a solution that helps to omit the Cloud storage for any kind of apps (even chats and social networks).
           </p>
           <br /><br />
-          <p>Source code: <a href="https://github.com/HelloXiuXiu/pollution-app-native" target="_blank" rel="noopener nofollow">GitHub</a></p>
-          <p>Online (web version): <a href="https://air-pollution.xyz" target="_blank" rel="noopener nofollow">air-pollution.xyz</a></p>
+          <p>Source code: <a href="https://github.com/HelloXiuXiu/pollution-app-native" target="_blank" rel="noopener nofollow noreferrer">GitHub</a></p>
+          <p>Online (web version): <a href="https://air-pollution.xyz" target="_blank" rel="noopener nofollow noreferrer">air-pollution.xyz</a></p>
           <p className="contribution">contribution</p>
           <h2 className="subheading">data:</h2>
           <p className="contribution-subtext">The data comes from <a href="https://open-meteo.com/" target="_blank" rel="noopener nofollow noreferrer">Open-Meteo</a>&nbsp;
