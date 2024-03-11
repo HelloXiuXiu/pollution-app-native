@@ -7,13 +7,20 @@
     "test": "ssc build -r -o --test=./test/index.js --headless",
     "init-project": "ssc init --config",
     "start": "ssc build -r -o",
-    "build": "ssc build -o"
+    "build": "ssc build -o",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "esbuild": "^0.20.1"
+    "esbuild": "^0.20.1",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.34.0"
   },
   "dependencies": {
     "@socketsupply/socket": "^0.5.4",
