@@ -1,5 +1,5 @@
 import process from 'socket:process'
-import os from 'socket:os'
+// import os from 'socket:os'
 
 import { createRoot } from 'react-dom/client'
 import React from 'react'
